@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ButtonComponents from "./ButtonComponents";
+import Count from "./Count";
 
 export const App = () => {
     const [count, setCount] = useState(0);
@@ -44,6 +45,8 @@ export const App = () => {
                             : "bg-red-600"
                 }
             />
+            {/* new count code */}
+            <Count/>
         </div>
     );
 };
