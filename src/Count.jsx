@@ -13,6 +13,9 @@ const Count = () => {
             setCount((prev)=> prev - 1)
         }
     }
+    const handleReset = () => {
+        setCount(0)
+    }
     return (
         <div>
             <h3 className="bg-linear-90 to-blue-600 via-orange-700 from-purple-700 bg-clip-text" style={{WebkitTextFillColor: "transparent", WebkitBackgroundClip: "text", fontSize: "30px", fontWeight: "700"}}>InDe Operation</h3>
@@ -20,6 +23,7 @@ const Count = () => {
             <div className="flex gap-3 justify-center items-center">
                <ButtonComponents onclick={handleIncrement} type="button" text="+" className="bg-blue-600 font-bold text-white"/>
                <ButtonComponents type="button" text="-" className="bg-green-600 font-bold" onclick={handleDecrease}/>
+               <ButtonComponents type="button" text="Reset" className="bg-red-700 font-bold" onclick={handleReset}/>
             </div>
         </div>
     )
