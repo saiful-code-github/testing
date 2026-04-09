@@ -19,7 +19,7 @@ const Count = () => {
             <p className="text-5xl font-bold my-[20px] text-center">{count}</p>
             <div className="flex gap-3 justify-center items-center">
                <ButtonComponents onclick={handleIncrement} type="button" text="+" className="bg-blue-600 font-bold text-white"/>
-               <ButtonComponents type="button" text="-" className="bg-green-600 font-bold" onclick={handleDecrease}/>
+               <ButtonComponents type="button" text="-" className="bg-orange-600 font-bold" onclick={handleDecrease}/>
             </div>
         </div>
     )
