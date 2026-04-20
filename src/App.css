@@ -1,0 +1,43 @@
+.from_group{
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.from_input{
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    transition: all .3s ease;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.from_input::placeholder{
+    color: transparent;
+}
+.from_floting{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    pointer-events: none;
+    background-color: transparent;
+    color: #151515;
+    transition: all .3s ease;
+}
+.from_input:focus + .from_floting,
+.from_input:not(:placeholder-shown) + .from_floting{
+    top:-5px;
+    left: -5px;
+    font-size: 14px;
+    color: orangered;
+    background:linear-gradient(90deg, orangered, purple, blue, skyblue);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+}
+.from_input:focus{
+     background:linear-gradient(90deg, orangered, purple, blue, skyblue);
+     background-repeat: no-repeat;
+     background-size: 100% 2px;
+     background-position: 0% 100%;
+}
