@@ -1,0 +1,48 @@
+.form_group{
+    position: relative;
+    margin-bottom: 10px;
+}
+.form_input{
+    width: 100%;
+    outline: none;
+    border-bottom: 1px solid #151515;
+    padding: 25px 10px 0px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: all .4s ease;
+    color: #151515;
+}
+.form_input::placeholder{
+    color: transparent;
+}
+.form_floting{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: #151515;
+    background: transparent;
+    transition: all .4s ease;
+    pointer-events: none;
+}
+.form_input:focus + .form_floting,
+.form_input:not(:placeholder-shown) + .form_floting{
+    font-size: 14px;
+    color: olivedrab;
+    top: -2px;
+    left: -2px;
+    background:linear-gradient(90deg, orangered, olivedrab, purple);
+    -webkit-text-fill-color: transparent;
+    transition: all .4s ease;
+    -webkit-background-clip: text;
+}
+.form_input:focus{
+    background:linear-gradient(90deg, orangered, olivedrab, purple);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+     transition: all .4s ease;
+    background-position: 0% 100%;
+}
+.input2{
+    width: 67% !important;
+}
