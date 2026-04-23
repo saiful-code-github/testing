@@ -4,6 +4,7 @@ import { TodoDataContext } from "./TodoContext";
 import NewTodo from "./NewTodo";
 import FindTodo from "./FindTodo";
 import FilterTodo from "./FilterTodo";
+import PassFail from "./PassFail";
 
 const TodoInfo = () => {
     const {loading, err} = useContext(TodoDataContext);
@@ -18,6 +19,8 @@ const TodoInfo = () => {
              <NewTodo/>
              {/* filter todo */}
              <FilterTodo/>
+             {/* pass fail todo */}
+             <PassFail/>
              <TodoContent/>
         </div>
     )

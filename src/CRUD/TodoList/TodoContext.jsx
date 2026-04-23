@@ -20,6 +20,8 @@ const TodoContext = ({children}) => {
     //  filter state
     const [filterInput, setFilterInput] = useState("");
     const [filterTodo, setFilterTodo] = useState([]);
+    //pass fail state
+    const [passFail, setPassFail] = useState("all");
     const getData = () => {
         setLoading(true);
         setErr(false)
@@ -145,8 +147,21 @@ const TodoContext = ({children}) => {
         const filterData = filterTodo.filter((item)=> item.name.toLowerCase().includes(value));
         setTodo(filterData);
     }
+    const handlePassFail = (e) => {
+        const value = e.target.value;
+        setPassFail(value);
+        if(value === "all") {
+             setTodo(TodoData);
+        }else if (value === "pass"){
+             const pass = TodoData.filter((item)=> item.marks >= 50)
+                setTodo(pass);
+        }else if (value === "fail"){
+            const fail = TodoData.filter((item)=> item.marks < 50)
+                setTodo(fail);
+        }
+    }
     return (
-        <TodoDataContext.Provider value={{loading, err, todo, handleDelete, handleEdit, newTodo, editId, handleNewTodo, handleSubmit, findTodo, setFindTodo, handleFindTodo, findData, search, handleRemove, filterInput, handleFilter}}>
+        <TodoDataContext.Provider value={{loading, err, todo, handleDelete, handleEdit, newTodo, editId, handleNewTodo, handleSubmit, findTodo, setFindTodo, handleFindTodo, findData, search, handleRemove, filterInput, handleFilter, passFail, handlePassFail}}>
              {children}
         </TodoDataContext.Provider>
     )
