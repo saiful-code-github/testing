@@ -1,0 +1,44 @@
+.form_group{
+    position: relative;
+    margin-bottom: 10px;
+}
+.form_input{
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 1px solid #b8b8b8;
+    transition: all .4s ease;
+}
+.form_input::placeholder{
+    color: transparent;
+}
+.form_floting{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    pointer-events: none;
+    color: #151515;
+    background-color: transparent;
+    transition: all .4s ease;
+}
+.form_input:focus ~ .form_floting,
+.form_input:not(:placeholder-shown) ~ .form_floting{
+    top: -5px;
+    left: -5px;
+    font-size: 14px;
+    background: linear-gradient(90deg, orangered, skyblue, blue);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.form_input:focus{
+     background: linear-gradient(90deg, orangered, skyblue, blue);
+     background-repeat: no-repeat;
+     background-size: 100% 1px;
+     background-position: 0% 100%;
+}
+.input2{
+    width: 70%;
+}

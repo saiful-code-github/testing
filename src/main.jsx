@@ -6,7 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap-icons/font/bootstrap-icons.min.css";
 // import CrudApp from './CRUD/CrudApp';
 import './App.css';
-import TodoApp from './CRUD/TodoList/TodoApp';
+import Todo2App from './CRUD/TodoList2/Todo2App';
+// import TodoApp from './CRUD/TodoList/TodoApp';
 // import TikTakTeoApp from './TikTakTeo/TikTakTeoApp.jsx';
 // import TikTakTeoApp2 from './TIkTakTeo2/TikTakTeoApp';
 // import TikTakTeopApp3 from './TikTakTeo3/TikTakTeoApp.jsx';
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
       <TikTakTeoApp2/> */}
       {/* <TikTakTeopApp3/> */}
       {/* <CrudApp/> */}
-      <TodoApp/>
+      {/* <TodoApp/> */}
+      <Todo2App/>
     </div>
 )
